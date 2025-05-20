@@ -1,0 +1,190 @@
+/* Styles for Psycho-Color Analysis System */
+
+/* Color ranking styles */
+.color-ranking {
+    cursor: move;
+}
+
+.color-ranking li {
+    margin-bottom: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.color-ranking li[data-color="white"] {
+    color: #333;
+    text-shadow: none;
+    border: 1px solid #ddd;
+}
+
+/* Color energy styles */
+.energy-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.cool-blue {
+    background-color: #3498db;
+}
+
+.earth-green {
+    background-color: #2ecc71;
+}
+
+.sunshine-yellow {
+    background-color: #f1c40f;
+    color: #333;
+}
+
+.fiery-red {
+    background-color: #e74c3c;
+}
+
+/* Dimension chart styles */
+.dimension-chart-container {
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+/* Results section styles */
+.section-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.section-header {
+    padding: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.section-body {
+    padding: 20px;
+}
+
+.jung-header {
+    background-color: #3498db;
+}
+
+.personality-header {
+    background-color: #9b59b6;
+}
+
+.emotional-header {
+    background-color: #e74c3c;
+}
+
+.recommendations-header {
+    background-color: #2ecc71;
+}
+
+/* Emotion tag styles */
+.emotion-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/* Recommendation item styles */
+.recommendation-item {
+    padding: 10px;
+    border-left: 4px solid #2ecc71;
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+}
+
+/* Loading spinner */
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .col-md-6 {
+        margin-bottom: 20px;
+    }
+}
+
+/* Color picker styles */
+.color-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.color-option {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-option.selected {
+    border-color: #333;
+    transform: scale(1.1);
+}
+
+/* Animation for results */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Print styles */
+@media print {
+    .btn, .accordion-button::after {
+        display: none;
+    }
+    
+    .accordion-button {
+        color: #000;
+        background-color: #fff;
+        font-weight: bold;
+    }
+    
+    .accordion-collapse {
+        display: block !important;
+    }
+    
+    .card {
+        border: none;
+    }
+    
+    .card-header {
+        background-color: #fff !important;
+        color: #000 !important;
+        border-bottom: 2px solid #000;
+    }
+}
